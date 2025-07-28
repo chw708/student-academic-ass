@@ -1,7 +1,34 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  base: '/',
-  plugins: [react()],
+  plugins: [
+    react(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['icon-192.png', 'icon-512.png'],
+      manifest: {
+        name: '학습 공부 비서',
+        short_name: '공부비서',
+        start_url: '/',
+        display: 'standalone',
+        background_color: '#111111',
+        theme_color: '#22c55e',
+        description: '오늘 할 일과 공부시간을 관리해주는 나만의 비서!',
+        icons: [
+          {
+            src: 'icon-192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: 'icon-512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+      },
+    }),
+  ],
 });

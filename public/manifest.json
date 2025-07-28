@@ -1,11 +1,11 @@
 {
   "name": "학생 공부 비서",
   "short_name": "공부비서",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#111111",
   "theme_color": "#22c55e",
-  "description": "오늘 할 일과 공부 시간을 관리해주는 나만의 비서!",
+  "description": "오늘 할 일과 공부시간을 관리해주는 나만의 비서!",
   "icons": [
     {
       "src": "icon-192.png",

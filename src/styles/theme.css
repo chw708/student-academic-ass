@@ -79,7 +79,6 @@
 
 @layer base {
   #root {
-    /* 기존 spark-app 변수를 root로 변경 */
     --tomato-contrast: #fff;
     --red-contrast: #fff;
     --ruby-contrast: #fff;
@@ -156,10 +155,6 @@
     --radius-xl: calc(12px * var(--radius-factor) * var(--size-scale));
     --radius-2xl: calc(16px * var(--radius-factor) * var(--size-scale));
     --radius-full: 9999px;
-
-    --color-neutral-1: var(--slate-1);
-    --color-neutral-2: var(--slate-2);
-    ...
   }
 
   #root.dark-theme {

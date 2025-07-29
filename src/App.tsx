@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Toaster } from 'sonner'; // ✅ 패키지에서 직접 불러오기
 import { Navigation } from './components/Navigation';
 import { HomePage } from './components/HomePage';
 import { TasksPage } from './components/TasksPage';
@@ -29,7 +30,7 @@ function App() {
         {renderCurrentPage()}
       </div>
       <Navigation currentPage={currentPage} onPageChange={setCurrentPage} />
-      <Toaster position="top-center" />
+      <Toaster position="top-center" /> {/* ✅ 여기서 이제 오류 없음 */}
     </div>
   );
 }

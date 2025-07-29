@@ -9,7 +9,6 @@ export function TasksPage() {
   const [newTask, setNewTask] = useState('');
   const [selectedSubject, setSelectedSubject] = useState<Subject | ''>('');
 
-  // ✅ 기존 기능 유지: 로컬 스토리지에서 할 일 불러오기
   useEffect(() => {
     const savedTasks = localStorage.getItem('tasks');
     if (savedTasks) {
@@ -19,25 +18,16 @@ export function TasksPage() {
 
   const addTask = () => {
     if (!newTask || !selectedSubject) return;
-
     const updatedTasks = [...tasks, { subject: selectedSubject as Subject, task: newTask }];
     setTasks(updatedTasks);
     setNewTask('');
     setSelectedSubject('');
-
-    // ✅ 기존 기능 유지: 할 일 추가 시 자동 저장
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
   };
 
   const saveTasks = () => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
-
-    // ✅ sonner → 브라우저 기본 알림으로 대체
-    if (window.Notification && Notification.permission === 'granted') {
-      new Notification('저장 완료', { body: '할 일이 저장되었습니다.' });
-    } else {
-      alert('할 일이 저장되었습니다.');
-    }
+    alert('할 일이 저장되었습니다.');
   };
 
   return (

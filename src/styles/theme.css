@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/* ✅ Tailwind import 제거: Vite가 자동으로 처리합니다 */
+
+/* === Radix UI Colors === */
+>>>>>>> 87f0cf4 (fix: updated theme.css)
 @import './vendor/colors/sage-dark.css' layer(base);
 @import './vendor/colors/olive.css' layer(base);
 @import './vendor/colors/olive-dark.css' layer(base);
@@ -61,6 +68,73 @@
 @import './vendor/colors/slate-dark.css' layer(base);
 @import './vendor/colors/slate-alpha.css' layer(base);
 @import './vendor/colors/slate-dark-alpha.css' layer(base);
+=======
+@import "../../node_modules/./vendor/tailwindcss/tailwind.css";
+
+@import "../../node_modules/./vendor/colors/sage-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/olive.css" layer(base);
+@import "../../node_modules/./vendor/colors/olive-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/sand.css" layer(base);
+@import "../../node_modules/./vendor/colors/sand-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/red.css" layer(base);
+@import "../../node_modules/./vendor/colors/red-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/ruby.css" layer(base);
+@import "../../node_modules/./vendor/colors/ruby-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/crimson.css" layer(base);
+@import "../../node_modules/./vendor/colors/crimson-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/pink.css" layer(base);
+@import "../../node_modules/./vendor/colors/pink-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/plum.css" layer(base);
+@import "../../node_modules/./vendor/colors/plum-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/purple.css" layer(base);
+@import "../../node_modules/./vendor/colors/purple-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/violet.css" layer(base);
+@import "../../node_modules/./vendor/colors/violet-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/iris.css" layer(base);
+@import "../../node_modules/./vendor/colors/iris-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/indigo.css" layer(base);
+@import "../../node_modules/./vendor/colors/indigo-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/blue.css" layer(base);
+@import "../../node_modules/./vendor/colors/blue-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/cyan.css" layer(base);
+@import "../../node_modules/./vendor/colors/cyan-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/teal.css" layer(base);
+@import "../../node_modules/./vendor/colors/teal-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/jade.css" layer(base);
+@import "../../node_modules/./vendor/colors/jade-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/green.css" layer(base);
+@import "../../node_modules/./vendor/colors/green-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/grass.css" layer(base);
+@import "../../node_modules/./vendor/colors/grass-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/bronze.css" layer(base);
+@import "../../node_modules/./vendor/colors/bronze-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/gold.css" layer(base);
+@import "../../node_modules/./vendor/colors/gold-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/brown.css" layer(base);
+@import "../../node_modules/./vendor/colors/brown-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/orange.css" layer(base);
+@import "../../node_modules/./vendor/colors/orange-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/amber.css" layer(base);
+@import "../../node_modules/./vendor/colors/amber-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/yellow.css" layer(base);
+@import "../../node_modules/./vendor/colors/yellow-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/lime.css" layer(base);
+@import "../../node_modules/./vendor/colors/lime-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/mint.css" layer(base);
+@import "../../node_modules/./vendor/colors/mint-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/sky.css" layer(base);
+@import "../../node_modules/./vendor/colors/sky-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/tomato.css" layer(base);
+@import "../../node_modules/./vendor/colors/tomato-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/gray.css" layer(base);
+@import "../../node_modules/./vendor/colors/gray-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/mauve.css" layer(base);
+@import "../../node_modules/./vendor/colors/mauve-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/slate.css" layer(base);
+@import "../../node_modules/./vendor/colors/slate-dark.css" layer(base);
+@import "../../node_modules/./vendor/colors/slate-alpha.css" layer(base);
+@import "../../node_modules/./vendor/colors/slate-dark-alpha.css" layer(base);
+>>>>>>> 67bac13 (fix: updated theme.css)
 
 /* === Base Layer === */
 @layer base {

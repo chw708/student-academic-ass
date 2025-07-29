@@ -4,14 +4,15 @@ import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Clock, TrendUp } from '@phosphor-icons/react';
 import { Task } from '@/lib/types';
 import { autoScheduleTasks, getWeekStart, addDays, getSubjectColor } from '@/lib/scheduler';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 export function ProgressPage() {
-  const [weeklyTasks] = useKV<Task[]>('weekly-tasks', []);
-  const [dailyTime] = useKV<Record<string, number>>('daily-available-time', {});
+  const [weeklyTasks] = useLocalStorage<Task[]>('weekly-tasks', []);
+  const [dailyTime] = useLocalStorage<Record<string, number>>('daily-available-time', {});
 
   const weekStart = getWeekStart();
   const schedules = autoScheduleTasks(weeklyTasks, dailyTime, weekStart);
-  
+
   const completedTasks = weeklyTasks.filter(task => task.completed);
   const totalTasks = weeklyTasks.length;
   const progressPercentage = totalTasks > 0 ? (completedTasks.length / totalTasks) * 100 : 0;
@@ -19,7 +20,7 @@ export function ProgressPage() {
   const totalMinutes = weeklyTasks.reduce((sum, task) => sum + task.estimatedMinutes, 0);
   const completedMinutes = completedTasks.reduce((sum, task) => sum + task.estimatedMinutes, 0);
 
-  // Subject-wise progress
+  // ✅ 과목별 진행 상황
   const subjectProgress = weeklyTasks.reduce((acc, task) => {
     if (!acc[task.subject]) {
       acc[task.subject] = { total: 0, completed: 0, totalMinutes: 0, completedMinutes: 0 };
@@ -46,7 +47,7 @@ export function ProgressPage() {
         </CardHeader>
       </Card>
 
-      {/* Overall Progress */}
+      {/* 전체 진도율 */}
       <Card>
         <CardHeader className="flex flex-row items-center gap-2">
           <TrendUp className="text-primary" size={20} />
@@ -77,7 +78,7 @@ export function ProgressPage() {
         </CardContent>
       </Card>
 
-      {/* Subject Progress */}
+      {/* 과목별 진도 */}
       <Card>
         <CardHeader>
           <CardTitle className="text-lg">과목별 진도</CardTitle>
@@ -113,7 +114,7 @@ export function ProgressPage() {
         </CardContent>
       </Card>
 
-      {/* Daily Schedule Overview */}
+      {/* 주간 일정 현황 */}
       <Card>
         <CardHeader>
           <CardTitle className="text-lg">주간 일정 현황</CardTitle>
@@ -124,7 +125,7 @@ export function ProgressPage() {
               const dayTasks = schedule.tasks;
               const completedDayTasks = dayTasks.filter(task => task.completed);
               const dayProgress = dayTasks.length > 0 ? (completedDayTasks.length / dayTasks.length) * 100 : 0;
-              
+
               return (
                 <div key={schedule.date} className="border rounded-lg p-4">
                   <div className="flex items-center justify-between mb-3">

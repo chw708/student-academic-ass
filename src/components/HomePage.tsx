@@ -4,28 +4,29 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Clock, Calendar, BookOpen } from '@phosphor-icons/react';
 import { Settings, Task, DailySchedule } from '@/lib/types';
-import { getDateString, formatDate, getDaysBetween, getTodaysQuote, getSubjectColor, autoScheduleTasks, getWeekStart } from '@/lib/scheduler';
+import {
+  getDateString,
+  formatDate,
+  getDaysBetween,
+  getTodaysQuote,
+  getSubjectColor,
+  autoScheduleTasks,
+  getWeekStart
+} from '@/lib/scheduler';
 import { WelcomeScreen } from './WelcomeScreen';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 interface HomePageProps {
   onNavigate?: (page: string) => void;
 }
 
 export function HomePage({ onNavigate }: HomePageProps) {
-  const [settings] = useKV<Settings>('settings', {});
-  const [weeklyTasks] = useKV<Task[]>('weekly-tasks', []);
-  const [dailyTime] = useKV<Record<string, number>>('daily-available-time', {});
-  const [, setWeeklyTasks] = useKV<Task[]>('weekly-tasks', []);
-  
+  const [settings] = useLocalStorage<Settings>('settings', {});
+  const [weeklyTasks, setWeeklyTasks] = useLocalStorage<Task[]>('weekly-tasks', []);
+  const [dailyTime] = useLocalStorage<Record<string, number>>('daily-available-time', {});
+
   const today = getDateString();
   const weekStart = getWeekStart();
-  const todaySchedule = getTodaySchedule();
-  const quote = getTodaysQuote();
-
-  // Show welcome screen if no tasks are set up
-  if (weeklyTasks.length === 0) {
-    return <WelcomeScreen onGetStarted={() => onNavigate?.('tasks')} />;
-  }
 
   function getTodaySchedule(): DailySchedule {
     const schedules = autoScheduleTasks(weeklyTasks, dailyTime, weekStart);
@@ -36,6 +37,15 @@ export function HomePage({ onNavigate }: HomePageProps) {
     };
   }
 
+  const todaySchedule = getTodaySchedule();
+  const quote = getTodaysQuote();
+
+  // ✅ 초기화면 (할 일 없을 때)
+  if (weeklyTasks.length === 0) {
+    return <WelcomeScreen onGetStarted={() => onNavigate?.('tasks')} />;
+  }
+
+  // ✅ 할 일 완료 토글
   function toggleTaskCompletion(taskId: string) {
     const updatedTasks = weeklyTasks.map(task =>
       task.id === taskId ? { ...task, completed: !task.completed } : task
@@ -43,6 +53,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
     setWeeklyTasks(updatedTasks);
   }
 
+  // ✅ 디데이 계산
   function getDDayInfo() {
     if (!settings.examDate) return null;
     const daysLeft = getDaysBetween(today, settings.examDate);
@@ -63,9 +74,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-center text-muted-foreground">
-            {formatDate(today)}
-          </p>
+          <p className="text-center text-muted-foreground">{formatDate(today)}</p>
           {dDayInfo && (
             <div className="mt-4 p-4 bg-accent/10 rounded-lg text-center">
               <div className="text-2xl font-bold text-accent">
@@ -135,8 +144,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                         {task.title}
                       </div>
                       <div className="flex items-center gap-2 mt-1">
-                        <Badge 
-                          variant="secondary" 
+                        <Badge
+                          variant="secondary"
                           className={getSubjectColor(task.subject)}
                         >
                           {task.subject}

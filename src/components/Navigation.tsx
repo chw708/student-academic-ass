@@ -1,5 +1,5 @@
 import { House, ListChecks, ChartBar, Gear } from '@phosphor-icons/react';
-import { cn } from '@/lib/utils';
+import { someFunction } from "../lib/utils";
 
 interface NavigationProps {
   currentPage: string;

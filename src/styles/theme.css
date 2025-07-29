@@ -1,70 +1,71 @@
-@import "../../node_modules/tailwindcss/tailwind.css";
+/* ✅ Tailwind import 제거: Vite가 자동으로 처리합니다 */
 
-@import "../../node_modules/@radix-ui/colors/sage-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/olive.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/olive-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/sand.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/sand-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/red.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/red-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/ruby.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/ruby-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/crimson.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/crimson-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/pink.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/pink-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/plum.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/plum-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/purple.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/purple-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/violet.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/violet-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/iris.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/iris-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/indigo.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/indigo-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/blue.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/blue-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/cyan.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/cyan-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/teal.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/teal-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/jade.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/jade-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/green.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/green-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/grass.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/grass-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/bronze.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/bronze-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/gold.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/gold-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/brown.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/brown-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/orange.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/orange-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/amber.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/amber-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/yellow.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/yellow-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/lime.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/lime-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/mint.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/mint-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/sky.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/sky-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/tomato.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/tomato-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/gray.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/gray-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/mauve.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/mauve-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/slate.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/slate-dark.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/slate-alpha.css" layer(base);
-@import "../../node_modules/@radix-ui/colors/slate-dark-alpha.css" layer(base);
+/* === Radix UI Colors === */
+@import './vendor/colors/sage-dark.css' layer(base);
+@import './vendor/colors/olive.css' layer(base);
+@import './vendor/colors/olive-dark.css' layer(base);
+@import './vendor/colors/sand.css' layer(base);
+@import './vendor/colors/sand-dark.css' layer(base);
+@import './vendor/colors/red.css' layer(base);
+@import './vendor/colors/red-dark.css' layer(base);
+@import './vendor/colors/ruby.css' layer(base);
+@import './vendor/colors/ruby-dark.css' layer(base);
+@import './vendor/colors/crimson.css' layer(base);
+@import './vendor/colors/crimson-dark.css' layer(base);
+@import './vendor/colors/pink.css' layer(base);
+@import './vendor/colors/pink-dark.css' layer(base);
+@import './vendor/colors/plum.css' layer(base);
+@import './vendor/colors/plum-dark.css' layer(base);
+@import './vendor/colors/purple.css' layer(base);
+@import './vendor/colors/purple-dark.css' layer(base);
+@import './vendor/colors/violet.css' layer(base);
+@import './vendor/colors/violet-dark.css' layer(base);
+@import './vendor/colors/iris.css' layer(base);
+@import './vendor/colors/iris-dark.css' layer(base);
+@import './vendor/colors/indigo.css' layer(base);
+@import './vendor/colors/indigo-dark.css' layer(base);
+@import './vendor/colors/blue.css' layer(base);
+@import './vendor/colors/blue-dark.css' layer(base);
+@import './vendor/colors/cyan.css' layer(base);
+@import './vendor/colors/cyan-dark.css' layer(base);
+@import './vendor/colors/teal.css' layer(base);
+@import './vendor/colors/teal-dark.css' layer(base);
+@import './vendor/colors/jade.css' layer(base);
+@import './vendor/colors/jade-dark.css' layer(base);
+@import './vendor/colors/green.css' layer(base);
+@import './vendor/colors/green-dark.css' layer(base);
+@import './vendor/colors/grass.css' layer(base);
+@import './vendor/colors/grass-dark.css' layer(base);
+@import './vendor/colors/bronze.css' layer(base);
+@import './vendor/colors/bronze-dark.css' layer(base);
+@import './vendor/colors/gold.css' layer(base);
+@import './vendor/colors/gold-dark.css' layer(base);
+@import './vendor/colors/brown.css' layer(base);
+@import './vendor/colors/brown-dark.css' layer(base);
+@import './vendor/colors/orange.css' layer(base);
+@import './vendor/colors/orange-dark.css' layer(base);
+@import './vendor/colors/amber.css' layer(base);
+@import './vendor/colors/amber-dark.css' layer(base);
+@import './vendor/colors/yellow.css' layer(base);
+@import './vendor/colors/yellow-dark.css' layer(base);
+@import './vendor/colors/lime.css' layer(base);
+@import './vendor/colors/lime-dark.css' layer(base);
+@import './vendor/colors/mint.css' layer(base);
+@import './vendor/colors/mint-dark.css' layer(base);
+@import './vendor/colors/sky.css' layer(base);
+@import './vendor/colors/sky-dark.css' layer(base);
+@import './vendor/colors/tomato.css' layer(base);
+@import './vendor/colors/tomato-dark.css' layer(base);
+@import './vendor/colors/gray.css' layer(base);
+@import './vendor/colors/gray-dark.css' layer(base);
+@import './vendor/colors/mauve.css' layer(base);
+@import './vendor/colors/mauve-dark.css' layer(base);
+@import './vendor/colors/slate.css' layer(base);
+@import './vendor/colors/slate-dark.css' layer(base);
+@import './vendor/colors/slate-alpha.css' layer(base);
+@import './vendor/colors/slate-dark-alpha.css' layer(base);
 
-/* 기존 Base, Root 스타일은 그대로 유지 */
+/* === Base Layer === */
 @layer base {
   *,
   ::after,
@@ -75,6 +76,7 @@
   }
 }
 
+/* === Root Variables === */
 @layer base {
   #root {
     --tomato-contrast: #fff;
@@ -109,13 +111,30 @@
     --olive-contrast: #fff;
     --sand-contrast: #fff;
     --size-scale: 1;
-    --size-0: 0px;
-    /* 이하 기존 변수 그대로 유지 */
+    --radius-sm: 2px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-full: 9999px;
+    --color-bg: #ffffff;
+    --color-bg-inset: #f8f8f8;
+    --color-bg-overlay: #ffffff;
+    --color-fg: #000000;
+    --color-fg-secondary: #444444;
+    --font-sans-serif: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+    --font-family: var(--font-sans-serif);
   }
 
   #root.dark-theme {
-    --color-bg: var(--color-neutral-1);
+    --color-bg: #111111;
     --color-bg-inset: #000000;
-    --color-bg-overlay: var(--color-neutral-3);
+    --color-bg-overlay: #222222;
+    --color-fg: #f5f5f5;
+    --color-fg-secondary: #bbbbbb;
   }
 }

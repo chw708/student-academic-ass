@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Toaster } from '@/components/ui/sonner';
+import { Toaster } from './components/ui/sonner';
 import { Navigation } from './components/Navigation';
 import { HomePage } from './components/HomePage';
 import { TasksPage } from './components/TasksPage';
